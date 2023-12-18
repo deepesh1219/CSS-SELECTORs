@@ -1,0 +1,188 @@
+ASSIGNMENT QUESTIONS
+CSS SELECTOR
+INDEX.HTML
+
+1.  For the given index.html file. Perform the following task, without changing the index.html file.
+Ans. <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>TOI</h2>
+            <div>
+                <h2>MENU</h2>
+                <ul>
+                    <li><a href="#" target="_blank">HOME</a></li>
+                    <li><a href="#" class="active" target="_self">HOME</a></li>
+                    <li><a href="#" target="_blank">SERVICES</a></li>
+                    <li><a href="#" target="_blank">CONTACT</a></li>
+                </ul>
+            </div>
+            <p>The Times of India</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta magni nobis maxime assumenda nostrum, fugiat blanditiis quos at architecto facilis quisquam eum, distinctio possimus amet.
+            </p>
+            
+            <p>Read Articles</p>
+        </nav>
+    </header>
+</body>
+</html>
+<br>
+2. For the given index.html file. Perform the following task, without changing the index.html file.
+Ans. <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <lii><a2 href="#">HOME</a></li>
+                <lii><a2 href="#">ABOUT</a></li>
+                <lii><a2 href="#">SERVICES</a></li>
+                <lii><a2 href="#">PORTFOLIO</a></li>
+                <lii><a2 href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--CONTENT-->
+    </main>
+</body>
+</html>
+
+3. Using any of the Pseudo element selectors, add any random words after and before the given HTML tag.
+Ans. <!--html code-->
+<body>
+    <h1>-element-</h1>
+</body>
+
+<!--Expected Output-->
+<!--Pseudo-Element-Selector-->
+
+4. Illustrate one example of a pseudo-class element selector hover example should include the following -
+Ans. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button>PW Skills</button>
+</body>
+</html>
+
+STYLE.CSS
+
+/*1).*/
+
+/*B2). The anchor tags change into color red..*/
+nav a{
+    color: red;
+}
+
+/*B3). The first h2 tag change the text and background color */
+nav > h2 {
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: snow;
+}
+
+/*B3). The first p tag and change the text into red*/
+ul + p {
+    color: red;
+}
+
+/* C1). The anchor tag with attribute href change color to red and remove their underline*/
+a {
+    text-decoration: none;
+    color: red;
+}
+
+/*C2). The the anchor tag attribute the class name "active" change the text color and provide the text style properties eith underlined.*/
+a[ class = "active" ] {
+    color: blue;
+    text-decoration: underline;
+}
+
+/*C3). The anchor tag with the attribute with the class target whose 
+value is _self and change the background color.*/
+a[ target = "_self"] {
+    background-color: gray;
+}
+
+/*D1). The last p tag and add "..." three dots after its value.*/
+p:last-child::after {
+    content: "...";
+}
+
+/*D2). The target the list bullet points and change the color of bullet points.*/
+li::marker {
+    color: green;
+}
+
+/*D3). The Three p tag and target the 2p tag select the first letter of 2p tag and chnge the color and text of first letter*/
+p:nth-child(even)::first-letter {
+    font-size: 40px;
+    color: red;
+}
+
+/*2).*/
+
+/*1). Use the descendant combinator selctor to remove the bullet points and remove underline.*/
+ul li a {
+    list-style: none;
+    text-decoration: none;
+}
+
+/*2). Use child combinator selector to display menu lists inline*/
+ul > lii {
+    display: inline;
+}
+
+/*3). Use adjacent sibling combinator selector to apply some margin list items */
+lii {
+    margin: 10px;
+}
+
+/*3).*/
+
+h1::after {
+    content: "selector";
+}
+
+h1::before {
+    content: pseudo;
+}
+
+/*4).*/
+button {
+    background-color: royalblue;
+    border: none;
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 15px 30px;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+button:hover {
+    box-shadow: 10px 5px 5px gray;
+    cursor: pointer;
+}
